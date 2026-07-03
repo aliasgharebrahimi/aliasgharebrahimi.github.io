@@ -3,60 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Ali Asghar | Portfolio</title>
     <style>
-        /* اضافه کردن کمی استایل برای بخش توضیحات */
+        /* تنظیمات کلی */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* کانتینر اصلی برای محدود کردن عرض محتوا */
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* تیترها */
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            font-size: 1.5rem;
+        }
+
+        /* بخش توضیحات */
         .description {
             font-style: italic;
-            color: #555;
+            color: #7f8c8d;
+            background: #ecf0f1;
+            padding: 20px;
+            border-left: 5px solid #3498db;
+            border-radius: 5px;
+        }
+
+        /* استایل لینک‌ها و دکمه‌ها */
+        .link-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #3498db;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        /* استایل مخصوص لینک‌های گیت‌هاب */
+        .github-link {
+            background-color: #24292e;
+        }
+        .github-link:hover {
+            background-color: #444;
+        }
+
+        /* فوتر */
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #95a5a6;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+            margin: 30px 0;
         }
     </style>
 </head>
 <body>
 
-    <h1>Hello, welcome to my website.</h1>
-    
-    <h2>Explanation about the site</h2>
-    <p class="description">
-        On this site, we cover a variety of interesting topics. We share programming tips and showcase engaging projects, 
-        alongside free tutorials ranging from frameworks to programming languages. Most importantly, however, 
-        we focus on deep learning and computer vision, implementing various models—all completely free of charge.
-    </p>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Site</h1>
+            <p style="text-align: center; color: #7f8c8d;">Exploring Deep Learning & Computer Vision</p>
+        </header>
 
-    <hr>
+        <section>
+            <h2>About This Site</h2>
+            <p class="description">
+                On this site, we cover a variety of interesting topics. We share programming tips and showcase engaging projects, 
+                alongside free tutorials ranging from frameworks to programming languages. 
+                <strong>Most importantly, we focus on Deep Learning and Computer Vision.</strong>
+            </p>
+        </section>
 
-    <h2>Go to other pages of the site</h2>
-    <!-- استفاده از مسیر نسبی به جای مسیر کامل سیستم -->
-    <a href="index.html">Home Page</a><br>
-    <a href="Tutorials.html">Tutorials</a><br>
-    <!-- اصلاح لینک ناقص قبلی -->
-    <a href="About.html">About Us</a> 
+        <hr>
 
-    <hr>
+        <section>
+            <h2>Navigation</h2>
+            <div class="link-group">
+                <a href="index.html">Home</a>
+                <a href="Tutorials.html">Tutorials</a>
+                <a href="About.html">About</a>
+            </div>
+        </section>
 
-    <h2>AI</h2>
-    <a href="Tutorials.html">AI News</a><br>
-    <a href="Tutorials.html">AI Tutorials</a>
+        <section>
+            <h2>AI & Learning</h2>
+            <div class="link-group">
+                <a href="Tutorials.html">AI News</a>
+                <a href="Tutorials.html">AI Tutorials</a>
+                <a href="Tutorials.html">Tips & Tricks</a>
+            </div>
+        </section>
 
-    <hr>
+        <section>
+            <h2>GitHub Repositories</h2>
+            <div class="link-group">
+                <a href="https://github.com/aliasgharebrahimi/ai-math" class="github-link" target="_blank">AI-Math</a>
+                <a href="https://github.com/aliasgharebrahimi/CV" class="github-link" target="_blank">Computer Vision</a>
+                <a href="https://github.com/aliasgharebrahimi/" class="github-link" target="_blank">My Profile</a>
+            </div>
+        </section>
 
-    <h2>Tips and Tricks</h2>
-    <a href="Tutorials.html">Tips and Tricks</a>
-
-    <hr>
-
-    <h2>GitHub</h2>
-    <a href="https://github.com/aliasgharebrahimi/ai-math" target="_blank">GitHub ai-math</a><br>
-    <a href="https://github.com/aliasgharebrahimi/CV" target="_blank">GitHub CV</a><br>
-    <a href="https://github.com/aliasgharebrahimi/" target="_blank">My GitHub</a>
-
-    <hr>
-
-    <h2>Selected Tutorials</h2>
-    <hr>
+        <section>
+            <h2>Selected Tutorials</h2>
+            <p style="color: #bdc3c7; text-align: center;">Coming Soon...</p>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; All rights to the site belong to Ali Asghar Ebrahimi.</p>
+        <p>&copy; 2026 All rights reserved to <strong>Ali Asghar Ebrahimi</strong></p>
     </footer>
 
 </body>
