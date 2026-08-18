@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="About Ali Asghar Ebrahimi"
+    >
+
+    <meta
+        name="author"
+        content="Ali Asghar Ebrahimi"
+    >
+
+    <title>
+        About Me — Ali Asghar Ebrahimi
+    </title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+
+            --background: #05070d;
+
+            --text: #f5f7fa;
+
+            --muted: #8c96a8;
+
+            --cyan: #00f5d4;
+
+            --blue: #4cc9f0;
+
+            --purple: #8b5cf6;
+
+            --border:
+                rgba(255, 255, 255, 0.09);
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                Inter,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--text);
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(0, 245, 212, 0.10),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 25%,
+                    rgba(139, 92, 246, 0.12),
+                    transparent 30%
+                ),
+
+                var(--background);
+
+            overflow-x: hidden;
+        }
+
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 60px 60px;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        /* NAVBAR */
+
+        .navbar {
+
+            position: fixed;
+
+            top: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width:
+                min(
+                    1250px,
+                    calc(100% - 30px)
+                );
+
+            padding: 15px 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            background:
+                rgba(5, 7, 13, 0.78);
+
+            backdrop-filter:
+                blur(22px);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 18px;
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+
+            color: var(--text);
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            font-weight: 750;
+
+            white-space: nowrap;
+        }
+
+
+        .logo span {
+            color: var(--cyan);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 4px;
+
+            overflow-x: auto;
+
+            scrollbar-width: none;
+        }
+
+
+        .nav-links::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .nav-links a {
+
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            padding: 9px 11px;
+
+            border-radius: 9px;
+
+            transition: 0.25s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--text);
+
+            background:
+                rgba(0, 245, 212, 0.08);
+        }
+
+
+        /* ABOUT */
+
+        main {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 170px 20px 100px;
+        }
+
+
+        .about {
+
+            width: 100%;
+
+            max-width: 850px;
+
+            text-align: center;
+
+            padding: 55px 45px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.055),
+                    rgba(255,255,255,0.012)
+                );
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 24px;
+
+            backdrop-filter:
+                blur(18px);
+
+            box-shadow:
+                0 20px 60px
+                rgba(0,0,0,0.28);
+        }
+
+
+        .about-label {
+
+            display: inline-block;
+
+            margin-bottom: 25px;
+
+            padding: 8px 15px;
+
+            color: var(--cyan);
+
+            background:
+                rgba(0,245,212,0.05);
+
+            border:
+                1px solid
+                rgba(0,245,212,0.18);
+
+            border-radius: 999px;
+
+            font-size: 12px;
+
+            font-weight: 650;
+        }
+
+
+        .about h1 {
+
+            font-size:
+                clamp(
+                    45px,
+                    8vw,
+                    75px
+                );
+
+            line-height: 1;
+
+            letter-spacing:
+                -0.06em;
+
+            margin-bottom: 22px;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    #ffffff 10%,
+                    #a8fff3 48%,
+                    #8b5cf6 100%
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+        }
+
+
+        .about h2 {
+
+            color: #dce3ed;
+
+            font-size:
+                clamp(
+                    18px,
+                    3vw,
+                    25px
+                );
+
+            font-weight: 500;
+
+            margin-bottom: 22px;
+        }
+
+
+        .about p {
+
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color: var(--muted);
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            border-top:
+                1px solid var(--border);
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        footer span {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+
+                flex-direction: column;
+
+                top: 10px;
+
+                padding: 11px;
+            }
+
+
+            .logo {
+                text-align: center;
+            }
+
+
+            main {
+                padding-top: 205px;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .about {
+
+                padding:
+                    40px 25px;
+
+                border-radius: 20px;
+            }
+
+
+            .about p {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            Ali Asghar
+            <span>Ebrahimi</span>
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="about.html">
+                About Me
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="achievements.html">
+                Achievements
+            </a>
+
+            <a href="technologies.html">
+                Technologies
+            </a>
+
+            <a href="expertise.html">
+                Technical Expertise
+            </a>
+
+            <a href="certificates.html">
+                Certificates
+            </a>
+
+            <a href="links.html">
+                Personal Links
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="about">
+
+            <div class="about-label">
+                About Me
+            </div>
+
+
+            <h1>
+                Ali Asghar Ebrahimi
+            </h1>
+
+
+            <h2>
+                Deep Learning & Computer Vision Researcher / Engineer
+            </h2>
+
+
+            <p>
+                I am Ali Asghar Ebrahimi, a developer and researcher
+                focused on Deep Learning, Computer Vision, and Artificial Intelligence.
+                I build and explore intelligent systems through mathematics,
+                programming, and machine learning.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        © 2026
+
+        <span>
+            Ali Asghar Ebrahimi
+        </span>
+
+        · All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>
