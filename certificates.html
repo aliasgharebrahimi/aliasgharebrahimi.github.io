@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Certificates — Ali Asghar Ebrahimi"
+    >
+
+    <meta
+        name="author"
+        content="Ali Asghar Ebrahimi"
+    >
+
+    <title>
+        Certificates — Ali Asghar Ebrahimi
+    </title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+
+            --background: #05070d;
+
+            --text: #f5f7fa;
+
+            --muted: #8c96a8;
+
+            --cyan: #00f5d4;
+
+            --blue: #4cc9f0;
+
+            --purple: #8b5cf6;
+
+            --border:
+                rgba(255, 255, 255, 0.09);
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                Inter,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--text);
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 15%,
+                    rgba(0, 245, 212, 0.09),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(139, 92, 246, 0.11),
+                    transparent 30%
+                ),
+
+                var(--background);
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================
+           GRID BACKGROUND
+        ========================================= */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 60px 60px;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+
+            position: fixed;
+
+            top: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width:
+                min(
+                    1250px,
+                    calc(100% - 30px)
+                );
+
+            padding: 15px 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            background:
+                rgba(5, 7, 13, 0.78);
+
+            backdrop-filter:
+                blur(22px);
+
+            -webkit-backdrop-filter:
+                blur(22px);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(0, 0, 0, 0.30);
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+
+            color: var(--text);
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            font-weight: 750;
+
+            white-space: nowrap;
+        }
+
+
+        .logo span {
+            color: var(--cyan);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            overflow-x: auto;
+
+            scrollbar-width: none;
+        }
+
+
+        .nav-links::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .nav-links a {
+
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            padding: 9px 11px;
+
+            border-radius: 9px;
+
+            transition: 0.25s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--text);
+
+            background:
+                rgba(0, 245, 212, 0.08);
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================= */
+
+        main {
+
+            width:
+                min(
+                    1100px,
+                    calc(100% - 36px)
+                );
+
+            margin:
+                0 auto;
+
+            padding:
+                170px 0 100px;
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .page-header {
+
+            margin-bottom: 55px;
+        }
+
+
+        .status {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding:
+                9px 15px;
+
+            margin-bottom:
+                25px;
+
+            color:
+                var(--cyan);
+
+            background:
+                rgba(0, 245, 212, 0.045);
+
+            border:
+                1px solid
+                rgba(0, 245, 212, 0.18);
+
+            border-radius:
+                999px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                650;
+        }
+
+
+        .status-dot {
+
+            width: 7px;
+
+            height: 7px;
+
+            border-radius: 50%;
+
+            background:
+                var(--cyan);
+
+            box-shadow:
+                0 0 14px
+                var(--cyan);
+        }
+
+
+        .page-header h1 {
+
+            font-size:
+                clamp(
+                    48px,
+                    8vw,
+                    82px
+                );
+
+            line-height:
+                0.95;
+
+            letter-spacing:
+                -0.06em;
+
+            margin-bottom:
+                24px;
+
+            background:
+
+                linear-gradient(
+                    110deg,
+                    #ffffff 10%,
+                    #a8fff3 48%,
+                    #8b5cf6 100%
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+        }
+
+
+        .page-header p {
+
+            max-width:
+                700px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                16px;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =========================================
+           CERTIFICATES GRID
+        ========================================= */
+
+        .certificates-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(0, 1fr)
+                );
+
+            gap:
+                20px;
+        }
+
+
+        /* =========================================
+           CERTIFICATE CARD
+        ========================================= */
+
+        .certificate-card {
+
+            position:
+                relative;
+
+            padding:
+                28px;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.055),
+                    rgba(255,255,255,0.012)
+                );
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                18px;
+
+            backdrop-filter:
+                blur(16px);
+
+            -webkit-backdrop-filter:
+                blur(16px);
+
+            overflow:
+                hidden;
+
+            transition:
+                transform 0.28s ease,
+                border-color 0.28s ease,
+                box-shadow 0.28s ease;
+        }
+
+
+        .certificate-card::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                260px;
+
+            height:
+                260px;
+
+            top:
+                -170px;
+
+            right:
+                -100px;
+
+            background:
+
+                radial-gradient(
+                    circle,
+                    rgba(
+                        0,
+                        245,
+                        212,
+                        0.12
+                    ),
+                    transparent 70%
+                );
+
+            opacity:
+                0;
+
+            transition:
+                opacity 0.3s ease;
+        }
+
+
+        .certificate-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.30
+                );
+
+            box-shadow:
+
+                0 18px 45px
+                rgba(0,0,0,0.28),
+
+                0 0 30px
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.05
+                );
+        }
+
+
+        .certificate-card:hover::before {
+            opacity: 1;
+        }
+
+
+        /* =========================================
+           CERTIFICATE HEADER
+        ========================================= */
+
+        .certificate-header {
+
+            display:
+                flex;
+
+            align-items:
+                flex-start;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .certificate-name {
+
+            color:
+                var(--blue);
+
+            font-size:
+                21px;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                -0.02em;
+        }
+
+
+        .certificate-year {
+
+            padding:
+                5px 9px;
+
+            color:
+                var(--cyan);
+
+            background:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.05
+                );
+
+            border:
+                1px solid
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.14
+                );
+
+            border-radius:
+                7px;
+
+            font-size:
+                10px;
+
+            font-weight:
+                650;
+
+            white-space:
+                nowrap;
+        }
+
+
+        /* =========================================
+           DESCRIPTION
+        ========================================= */
+
+        .certificate-description {
+
+            color:
+                var(--muted);
+
+            font-size:
+                14px;
+
+            line-height:
+                1.8;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        /* =========================================
+           PDF AREA
+        ========================================= */
+
+        .pdf-box {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
+            gap:
+                15px;
+
+            padding:
+                16px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.025
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.07
+                );
+
+            border-radius:
+                12px;
+        }
+
+
+        .pdf-name {
+
+            color:
+                #b8c2d3;
+
+            font-size:
+                12px;
+
+            overflow:
+                hidden;
+
+            text-overflow:
+                ellipsis;
+
+            white-space:
+                nowrap;
+        }
+
+
+        .view-button {
+
+            color:
+                var(--cyan);
+
+            text-decoration:
+                none;
+
+            font-size:
+                12px;
+
+            font-weight:
+                700;
+
+            padding:
+                8px 12px;
+
+            border:
+                1px solid
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.18
+                );
+
+            border-radius:
+                8px;
+
+            white-space:
+                nowrap;
+
+            transition:
+                0.25s ease;
+        }
+
+
+        .view-button:hover {
+
+            color:
+                #ffffff;
+
+            background:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.08
+                );
+
+            border-color:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.35
+                );
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            text-align:
+                center;
+
+            padding:
+                45px 20px;
+
+            border-top:
+                1px solid
+                var(--border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                13px;
+        }
+
+
+        footer span {
+
+            color:
+                var(--cyan);
+
+            font-weight:
+                600;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+
+                flex-direction:
+                    column;
+
+                top:
+                    10px;
+
+                padding:
+                    11px;
+            }
+
+
+            .logo {
+                text-align: center;
+            }
+
+
+            .nav-links {
+                justify-content: flex-start;
+            }
+
+
+            main {
+                padding-top: 195px;
+            }
+
+
+            .certificates-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            main {
+
+                width:
+                    calc(100% - 28px);
+
+                padding-top:
+                    205px;
+            }
+
+
+            .certificate-card {
+
+                padding:
+                    22px;
+
+                border-radius:
+                    16px;
+            }
+
+
+            .certificate-name {
+                font-size: 19px;
+            }
+
+
+            .certificate-description {
+                font-size: 13px;
+            }
+
+
+            .pdf-box {
+
+                align-items:
+                    flex-start;
+
+                flex-direction:
+                    column;
+            }
+
+
+            .view-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            Ali Asghar
+            <span>Ebrahimi</span>
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="about.html">
+                About Me
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="achievements.html">
+                Achievements
+            </a>
+
+            <a href="technologies.html">
+                Technologies
+            </a>
+
+            <a href="expertise.html">
+                Technical Expertise
+            </a>
+
+            <a href="certificates.html">
+                Certificates
+            </a>
+
+            <a href="links.html">
+                Personal Links
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================= -->
+
+    <main>
+
+
+        <section class="page-header">
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                Certificates
+
+            </div>
+
+
+            <h1>
+                My Certificates
+            </h1>
+
+
+            <p>
+                A collection of certificates and completed
+                courses related to Deep Learning, Computer Vision,
+                Git, and software development.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CERTIFICATES
+        ========================================= -->
+
+        <section class="certificates-grid">
+
+
+            <!-- Deep Learning -->
+
+            <article class="certificate-card">
+
+                <div class="certificate-header">
+
+                    <h2 class="certificate-name">
+                        Deep Learning
+                    </h2>
+
+                    <span class="certificate-year">
+                        Year: —
+                    </span>
+
+                </div>
+
+
+                <p class="certificate-description">
+
+                    Certificate related to Deep Learning concepts,
+                    neural networks, and modern machine learning
+                    techniques.
+
+                </p>
+
+
+                <div class="pdf-box">
+
+                    <span class="pdf-name">
+                        deeplearning2.pdf
+                    </span>
+
+                    <a
+                        href="deeplearning2.pdf"
+                        target="_blank"
+                        class="view-button"
+                    >
+                        View Certificate →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CNN -->
+
+            <article class="certificate-card">
+
+                <div class="certificate-header">
+
+                    <h2 class="certificate-name">
+                        Convolutional Neural Networks
+                    </h2>
+
+                    <span class="certificate-year">
+                        Year: —
+                    </span>
+
+                </div>
+
+
+                <p class="certificate-description">
+
+                    Certificate focused on Convolutional Neural
+                    Networks and their applications in
+                    Computer Vision.
+
+                </p>
+
+
+                <div class="pdf-box">
+
+                    <span class="pdf-name">
+                        CNN.pdf
+                    </span>
+
+                    <a
+                        href="CNN.pdf"
+                        target="_blank"
+                        class="view-button"
+                    >
+                        View Certificate →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Git -->
+
+            <article class="certificate-card">
+
+                <div class="certificate-header">
+
+                    <h2 class="certificate-name">
+                        Git
+                    </h2>
+
+                    <span class="certificate-year">
+                        Year: —
+                    </span>
+
+                </div>
+
+
+                <p class="certificate-description">
+
+                    Certificate covering Git version control,
+                    repository management, branching, and
+                    collaborative software development.
+
+                </p>
+
+
+                <div class="pdf-box">
+
+                    <span class="pdf-name">
+                        Git.pdf
+                    </span>
+
+                    <a
+                        href="Git.pdf"
+                        target="_blank"
+                        class="view-button"
+                    >
+                        View Certificate →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        © 2026
+
+        <span>
+            Ali Asghar Ebrahimi
+        </span>
+
+        · All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>
