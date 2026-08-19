@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Technologies — Ali Asghar Ebrahimi"
+    >
+
+    <meta
+        name="author"
+        content="Ali Asghar Ebrahimi"
+    >
+
+    <title>
+        Technologies — Ali Asghar Ebrahimi
+    </title>
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+
+            --background: #05070d;
+
+            --text: #f5f7fa;
+
+            --muted: #8c96a8;
+
+            --cyan: #00f5d4;
+
+            --blue: #4cc9f0;
+
+            --purple: #8b5cf6;
+
+            --border:
+                rgba(255, 255, 255, 0.09);
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                Inter,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--text);
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 15%,
+                    rgba(0, 245, 212, 0.10),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(139, 92, 246, 0.12),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 50% 100%,
+                    rgba(76, 201, 240, 0.08),
+                    transparent 35%
+                ),
+
+                var(--background);
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================
+           GRID BACKGROUND
+        ========================================= */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 60px 60px;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+
+            position: fixed;
+
+            top: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width:
+                min(
+                    1250px,
+                    calc(100% - 30px)
+                );
+
+            padding: 15px 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            background:
+                rgba(5, 7, 13, 0.78);
+
+            backdrop-filter:
+                blur(22px);
+
+            -webkit-backdrop-filter:
+                blur(22px);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(0, 0, 0, 0.30);
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+
+            color: var(--text);
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            font-weight: 750;
+
+            white-space: nowrap;
+        }
+
+
+        .logo span {
+            color: var(--cyan);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            overflow-x: auto;
+
+            scrollbar-width: none;
+        }
+
+
+        .nav-links::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .nav-links a {
+
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            padding: 9px 11px;
+
+            border-radius: 9px;
+
+            transition: 0.25s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--text);
+
+            background:
+                rgba(0, 245, 212, 0.08);
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================= */
+
+        main {
+
+            width:
+                min(
+                    1100px,
+                    calc(100% - 36px)
+                );
+
+            margin:
+                0 auto;
+
+            padding:
+                170px 0 100px;
+        }
+
+
+        /* =========================================
+           PAGE HEADER
+        ========================================= */
+
+        .page-header {
+
+            margin-bottom:
+                55px;
+        }
+
+
+        .status {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            padding:
+                9px 15px;
+
+            margin-bottom:
+                25px;
+
+            color:
+                var(--cyan);
+
+            background:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.045
+                );
+
+            border:
+                1px solid
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.18
+                );
+
+            border-radius:
+                999px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                650;
+        }
+
+
+        .status-dot {
+
+            width:
+                7px;
+
+            height:
+                7px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--cyan);
+
+            box-shadow:
+                0 0 14px
+                var(--cyan);
+        }
+
+
+        .page-header h1 {
+
+            font-size:
+                clamp(
+                    48px,
+                    8vw,
+                    82px
+                );
+
+            line-height:
+                0.95;
+
+            letter-spacing:
+                -0.06em;
+
+            margin-bottom:
+                24px;
+
+            background:
+
+                linear-gradient(
+                    110deg,
+                    #ffffff 10%,
+                    #a8fff3 48%,
+                    #8b5cf6 100%
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+        }
+
+
+        .page-header p {
+
+            max-width:
+                720px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                16px;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =========================================
+           TECHNOLOGY SECTION
+        ========================================= */
+
+        .technology-section {
+
+            margin-bottom:
+                55px;
+        }
+
+
+        .section-title {
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                14px;
+
+            margin-bottom:
+                22px;
+
+            font-size:
+                25px;
+
+            letter-spacing:
+                -0.03em;
+        }
+
+
+        .section-title i {
+
+            color:
+                var(--cyan);
+
+            font-size:
+                20px;
+        }
+
+
+        .section-line {
+
+            flex: 1;
+
+            height:
+                1px;
+
+            background:
+                var(--border);
+        }
+
+
+        /* =========================================
+           TECHNOLOGY GRID
+        ========================================= */
+
+        .technology-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(0, 1fr)
+                );
+
+            gap:
+                16px;
+        }
+
+
+        /* =========================================
+           TECHNOLOGY CARD
+        ========================================= */
+
+        .technology-card {
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                18px;
+
+            padding:
+                22px;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.055
+                    ),
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.012
+                    )
+                );
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                17px;
+
+            backdrop-filter:
+                blur(15px);
+
+            -webkit-backdrop-filter:
+                blur(15px);
+
+            transition:
+                transform 0.28s ease,
+                border-color 0.28s ease,
+                box-shadow 0.28s ease;
+        }
+
+
+        .technology-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.30
+                );
+
+            box-shadow:
+
+                0 18px 45px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.27
+                ),
+
+                0 0 25px
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.05
+                );
+        }
+
+
+        /* =========================================
+           ICON
+        ========================================= */
+
+        .tech-icon {
+
+            width:
+                58px;
+
+            height:
+                58px;
+
+            flex-shrink:
+                0;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border:
+                1px solid
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.16
+                );
+
+            border-radius:
+                14px;
+
+            background:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.045
+                );
+
+            color:
+                var(--cyan);
+
+            font-size:
+                27px;
+
+            transition:
+                0.28s ease;
+        }
+
+
+        .technology-card:hover .tech-icon {
+
+            background:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.09
+                );
+
+            border-color:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.35
+                );
+
+            transform:
+                scale(1.06);
+        }
+
+
+        /* =========================================
+           INFO
+        ========================================= */
+
+        .tech-info {
+
+            min-width:
+                0;
+
+            flex: 1;
+        }
+
+
+        .tech-name {
+
+            color:
+                var(--text);
+
+            font-size:
+                17px;
+
+            font-weight:
+                750;
+
+            margin-bottom:
+                7px;
+        }
+
+
+        .tech-level {
+
+            color:
+                var(--muted);
+
+            font-size:
+                12px;
+
+            margin-bottom:
+                10px;
+        }
+
+
+        .level-bar {
+
+            width:
+                100%;
+
+            height:
+                5px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.06
+                );
+
+            border-radius:
+                999px;
+
+            overflow:
+                hidden;
+        }
+
+
+        .level-fill {
+
+            height:
+                100%;
+
+            border-radius:
+                inherit;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    var(--cyan),
+                    var(--blue)
+                );
+        }
+
+
+        .expert {
+            width: 95%;
+        }
+
+
+        .advanced {
+            width: 88%;
+        }
+
+
+        .intermediate {
+            width: 70%;
+        }
+
+
+        .beginner {
+            width: 45%;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            text-align:
+                center;
+
+            padding:
+                45px 20px;
+
+            border-top:
+                1px solid var(--border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                13px;
+        }
+
+
+        footer span {
+
+            color:
+                var(--cyan);
+
+            font-weight:
+                600;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+
+                flex-direction:
+                    column;
+
+                top:
+                    10px;
+
+                padding:
+                    11px;
+            }
+
+
+            .logo {
+                text-align: center;
+            }
+
+
+            main {
+                padding-top:
+                    200px;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            main {
+
+                width:
+                    calc(100% - 28px);
+            }
+
+
+            .technology-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .technology-card {
+
+                padding:
+                    19px;
+            }
+
+
+            .tech-icon {
+
+                width:
+                    52px;
+
+                height:
+                    52px;
+
+                font-size:
+                    24px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            Ali Asghar
+            <span>Ebrahimi</span>
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="about.html">
+                About Me
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="achievements.html">
+                Achievements
+            </a>
+
+            <a href="technologies.html">
+                Technologies
+            </a>
+
+            <a href="expertise.html">
+                Technical Expertise
+            </a>
+
+            <a href="certificates.html">
+                Certificates
+            </a>
+
+            <a href="links.html">
+                Personal Links
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================= -->
+
+    <main>
+
+
+        <section class="page-header">
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                Technologies
+
+            </div>
+
+
+            <h1>
+                My Tech Stack
+            </h1>
+
+
+            <p>
+
+                Technologies, programming languages,
+                frameworks, libraries, operating systems,
+                and development tools that I use in my projects.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================================
+             PROGRAMMING LANGUAGES
+        ========================================= -->
+
+        <section class="technology-section">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-code"></i>
+
+                Programming Languages
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <div class="technology-grid">
+
+
+                <!-- Python -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-brands fa-python"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            Python
+                        </div>
+
+                        <div class="tech-level">
+                            Advanced / Expert
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill expert"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JavaScript -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-brands fa-js"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            JavaScript
+                        </div>
+
+                        <div class="tech-level">
+                            Intermediate
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill intermediate"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HTML -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-brands fa-html5"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            HTML
+                        </div>
+
+                        <div class="tech-level">
+                            Intermediate / Advanced
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill advanced"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CSS -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-brands fa-css3-alt"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            CSS
+                        </div>
+
+                        <div class="tech-level">
+                            Intermediate / Advanced
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill advanced"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             FRAMEWORKS
+        ========================================= -->
+
+        <section class="technology-section">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                Frameworks
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <div class="technology-grid">
+
+
+                <!-- Flask -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-solid fa-flask"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            Flask
+                        </div>
+
+                        <div class="tech-level">
+                            Python Web Framework
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill intermediate"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PyTorch -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-solid fa-fire"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            PyTorch
+                        </div>
+
+                        <div class="tech-level">
+                            Deep Learning Framework
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill advanced"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             LIBRARIES
+        ========================================= -->
+
+        <section class="technology-section">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-book"></i>
+
+                Libraries
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <div class="technology-grid">
+
+
+                <!-- NumPy -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-solid fa-calculator"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            NumPy
+                        </div>
+
+                        <div class="tech-level">
+                            Numerical Computing
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill advanced"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Pandas -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-solid fa-table"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            Pandas
+                        </div>
+
+                        <div class="tech-level">
+                            Data Analysis
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill advanced"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Matplotlib -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            Matplotlib
+                        </div>
+
+                        <div class="tech-level">
+                            Data Visualization
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill advanced"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OpenCV -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            OpenCV
+                        </div>
+
+                        <div class="tech-level">
+                            Computer Vision
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill advanced"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             OPERATING SYSTEMS
+        ========================================= -->
+
+        <section class="technology-section">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-desktop"></i>
+
+                Operating Systems
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <div class="technology-grid">
+
+
+                <!-- Windows -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-brands fa-windows"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            Windows
+                        </div>
+
+                        <div class="tech-level">
+                            Primary Development Environment
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill advanced"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Linux -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-brands fa-linux"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            Linux
+                        </div>
+
+                        <div class="tech-level">
+                            Development & AI Environment
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill intermediate"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             TOOLS
+        ========================================= -->
+
+        <section class="technology-section">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                Tools
+
+                <div class="section-line"></div>
+
+            </div>
+
+
+            <div class="technology-grid">
+
+
+                <!-- Git -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-brands fa-git-alt"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            Git
+                        </div>
+
+                        <div class="tech-level">
+                            Version Control
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill advanced"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- GitHub -->
+
+                <div class="technology-card">
+
+                    <div class="tech-icon">
+
+                        <i class="fa-brands fa-github"></i>
+
+                    </div>
+
+
+                    <div class="tech-info">
+
+                        <div class="tech-name">
+                            GitHub
+                        </div>
+
+                        <div class="tech-level">
+                            Code Hosting & Collaboration
+                        </div>
+
+                        <div class="level-bar">
+                            <div class="level-fill advanced"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        © 2026
+
+        <span>
+            Ali Asghar Ebrahimi
+        </span>
+
+        · All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>
