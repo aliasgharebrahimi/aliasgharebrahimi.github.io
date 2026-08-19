@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Achievements — Ali Asghar Ebrahimi"
+    >
+
+    <meta
+        name="author"
+        content="Ali Asghar Ebrahimi"
+    >
+
+    <title>
+        Achievements — Ali Asghar Ebrahimi
+    </title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+
+            --background: #05070d;
+
+            --text: #f5f7fa;
+
+            --muted: #8c96a8;
+
+            --cyan: #00f5d4;
+
+            --blue: #4cc9f0;
+
+            --purple: #8b5cf6;
+
+            --border:
+                rgba(255, 255, 255, 0.09);
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                Inter,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--text);
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(0, 245, 212, 0.10),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 25%,
+                    rgba(139, 92, 246, 0.12),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 50% 100%,
+                    rgba(76, 201, 240, 0.08),
+                    transparent 35%
+                ),
+
+                var(--background);
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================
+           GRID BACKGROUND
+        ========================================= */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(255, 255, 255, 0.025) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 60px 60px;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .navbar {
+
+            position: fixed;
+
+            top: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width:
+                min(
+                    1250px,
+                    calc(100% - 30px)
+                );
+
+            padding: 15px 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            background:
+                rgba(5, 7, 13, 0.78);
+
+            backdrop-filter:
+                blur(22px);
+
+            -webkit-backdrop-filter:
+                blur(22px);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(0, 0, 0, 0.30);
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+
+            color: var(--text);
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            font-weight: 750;
+
+            white-space: nowrap;
+        }
+
+
+        .logo span {
+            color: var(--cyan);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            overflow-x: auto;
+
+            scrollbar-width: none;
+        }
+
+
+        .nav-links::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .nav-links a {
+
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            padding: 9px 11px;
+
+            border-radius: 9px;
+
+            transition: 0.25s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--text);
+
+            background:
+                rgba(0, 245, 212, 0.08);
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================= */
+
+        main {
+
+            width:
+                min(
+                    1000px,
+                    calc(100% - 36px)
+                );
+
+            margin:
+                0 auto;
+
+            padding:
+                170px 0 100px;
+        }
+
+
+        /* =========================================
+           PAGE HEADER
+        ========================================= */
+
+        .page-header {
+
+            margin-bottom:
+                55px;
+        }
+
+
+        .status {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            padding:
+                9px 15px;
+
+            margin-bottom:
+                25px;
+
+            color:
+                var(--cyan);
+
+            background:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.045
+                );
+
+            border:
+                1px solid
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.18
+                );
+
+            border-radius:
+                999px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                650;
+        }
+
+
+        .status-dot {
+
+            width:
+                7px;
+
+            height:
+                7px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--cyan);
+
+            box-shadow:
+                0 0 14px
+                var(--cyan);
+        }
+
+
+        .page-header h1 {
+
+            font-size:
+                clamp(
+                    48px,
+                    8vw,
+                    82px
+                );
+
+            line-height:
+                0.95;
+
+            letter-spacing:
+                -0.06em;
+
+            margin-bottom:
+                24px;
+
+            background:
+
+                linear-gradient(
+                    110deg,
+                    #ffffff 10%,
+                    #a8fff3 48%,
+                    #8b5cf6 100%
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+        }
+
+
+        .page-header p {
+
+            max-width:
+                700px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                16px;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =========================================
+           ACHIEVEMENT
+        ========================================= */
+
+        .achievement {
+
+            position:
+                relative;
+
+            padding:
+                42px;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.055
+                    ),
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.012
+                    )
+                );
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                22px;
+
+            backdrop-filter:
+                blur(18px);
+
+            -webkit-backdrop-filter:
+                blur(18px);
+
+            overflow:
+                hidden;
+
+            transition:
+                0.3s ease;
+        }
+
+
+        .achievement:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.30
+                );
+
+            box-shadow:
+
+                0 20px 55px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.30
+                ),
+
+                0 0 35px
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.05
+                );
+        }
+
+
+        .achievement-number {
+
+            color:
+                var(--cyan);
+
+            font-size:
+                12px;
+
+            font-weight:
+                750;
+
+            letter-spacing:
+                0.08em;
+
+            margin-bottom:
+                18px;
+        }
+
+
+        .achievement h2 {
+
+            color:
+                var(--text);
+
+            font-size:
+                clamp(
+                    27px,
+                    5vw,
+                    42px
+                );
+
+            line-height:
+                1.15;
+
+            letter-spacing:
+                -0.04em;
+
+            margin-bottom:
+                20px;
+        }
+
+
+        .achievement h2 span {
+
+            color:
+                var(--cyan);
+        }
+
+
+        .achievement-description {
+
+            max-width:
+                780px;
+
+            color:
+                var(--muted);
+
+            font-size:
+                16px;
+
+            line-height:
+                1.9;
+
+            margin-bottom:
+                30px;
+        }
+
+
+        /* =========================================
+           SUB SECTION
+        ========================================= */
+
+        .achievement-details {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    1fr
+                );
+
+            gap:
+                15px;
+        }
+
+
+        .detail {
+
+            padding:
+                20px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.025
+                );
+
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.07
+                );
+
+            border-radius:
+                14px;
+        }
+
+
+        .detail-title {
+
+            color:
+                var(--blue);
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+
+            margin-bottom:
+                8px;
+        }
+
+
+        .detail p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                13px;
+
+            line-height:
+                1.7;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            text-align:
+                center;
+
+            padding:
+                45px 20px;
+
+            border-top:
+                1px solid
+                var(--border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                13px;
+        }
+
+
+        footer span {
+
+            color:
+                var(--cyan);
+
+            font-weight:
+                600;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+
+                flex-direction:
+                    column;
+
+                top:
+                    10px;
+
+                padding:
+                    11px;
+            }
+
+
+            .logo {
+                text-align: center;
+            }
+
+
+            main {
+                padding-top:
+                    200px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            main {
+
+                width:
+                    calc(100% - 28px);
+            }
+
+
+            .achievement {
+
+                padding:
+                    28px 22px;
+
+                border-radius:
+                    18px;
+            }
+
+
+            .achievement-details {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .achievement-description {
+
+                font-size:
+                    14px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            Ali Asghar
+            <span>Ebrahimi</span>
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="about.html">
+                About Me
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="achievements.html">
+                Achievements
+            </a>
+
+            <a href="technologies.html">
+                Technologies
+            </a>
+
+            <a href="expertise.html">
+                Technical Expertise
+            </a>
+
+            <a href="certificates.html">
+                Certificates
+            </a>
+
+            <a href="links.html">
+                Personal Links
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================= -->
+
+    <main>
+
+
+        <section class="page-header">
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                Achievements
+
+            </div>
+
+
+            <h1>
+                My Achievements
+            </h1>
+
+
+            <p>
+                A collection of technical achievements,
+                discoveries, and milestones in my journey
+                through Artificial Intelligence and Deep Learning.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================================
+             ACHIEVEMENT #01
+        ========================================= -->
+
+        <article class="achievement">
+
+            <div class="achievement-number">
+                ACHIEVEMENT / 01
+            </div>
+
+
+            <h2>
+                Discovering the
+                <span>Mathematical Foundations</span>
+                of Artificial Intelligence
+            </h2>
+
+
+            <p class="achievement-description">
+
+                Exploring and understanding the mathematical
+                foundations behind Deep Learning, including
+                the concepts that make neural networks capable
+                of learning from data.
+
+            </p>
+
+
+            <div class="achievement-details">
+
+
+                <div class="detail">
+
+                    <div class="detail-title">
+                        Learning & Implementation
+                    </div>
+
+                    <p>
+
+                        Studying the mathematical concepts behind
+                        Deep Learning and implementing them through
+                        practical neural network models.
+
+                    </p>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="detail-title">
+                        Focus
+                    </div>
+
+                    <p>
+
+                        Mathematics, neural networks,
+                        optimization, and the foundations
+                        of Deep Learning.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </article>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        © 2026
+
+        <span>
+            Ali Asghar Ebrahimi
+        </span>
+
+        · All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>
