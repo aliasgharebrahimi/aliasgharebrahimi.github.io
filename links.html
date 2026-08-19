@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Personal Links — Ali Asghar Ebrahimi"
+    >
+
+    <meta
+        name="author"
+        content="Ali Asghar Ebrahimi"
+    >
+
+    <title>
+        Personal Links — Ali Asghar Ebrahimi
+    </title>
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+
+            --background: #05070d;
+
+            --text: #f5f7fa;
+
+            --muted: #8c96a8;
+
+            --cyan: #00f5d4;
+
+            --blue: #4cc9f0;
+
+            --purple: #8b5cf6;
+
+            --border:
+                rgba(255, 255, 255, 0.09);
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            font-family:
+                Inter,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            color: var(--text);
+
+            background:
+
+                radial-gradient(
+                    circle at 15% 15%,
+                    rgba(0, 245, 212, 0.10),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(139, 92, 246, 0.12),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 50% 100%,
+                    rgba(76, 201, 240, 0.08),
+                    transparent 35%
+                ),
+
+                var(--background);
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================
+           GRID BACKGROUND
+        ========================================= */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            inset: 0;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 60px 60px;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+
+            position: fixed;
+
+            top: 20px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width:
+                min(
+                    1250px,
+                    calc(100% - 30px)
+                );
+
+            padding: 15px 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+            background:
+                rgba(5, 7, 13, 0.78);
+
+            backdrop-filter:
+                blur(22px);
+
+            -webkit-backdrop-filter:
+                blur(22px);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 15px 50px
+                rgba(0, 0, 0, 0.30);
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+
+            color: var(--text);
+
+            text-decoration: none;
+
+            font-size: 16px;
+
+            font-weight: 750;
+
+            white-space: nowrap;
+        }
+
+
+        .logo span {
+            color: var(--cyan);
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 4px;
+
+            overflow-x: auto;
+
+            scrollbar-width: none;
+        }
+
+
+        .nav-links::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .nav-links a {
+
+            color: var(--muted);
+
+            text-decoration: none;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            padding: 9px 11px;
+
+            border-radius: 9px;
+
+            transition: 0.25s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color: var(--text);
+
+            background:
+                rgba(0, 245, 212, 0.08);
+        }
+
+
+        /* =========================================
+           MAIN
+        ========================================= */
+
+        main {
+
+            width:
+                min(
+                    850px,
+                    calc(100% - 36px)
+                );
+
+            margin:
+                0 auto;
+
+            padding:
+                170px 0 100px;
+        }
+
+
+        /* =========================================
+           PAGE HEADER
+        ========================================= */
+
+        .page-header {
+
+            margin-bottom:
+                45px;
+
+            text-align:
+                center;
+        }
+
+
+        .status {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            gap:
+                10px;
+
+            padding:
+                9px 15px;
+
+            margin-bottom:
+                25px;
+
+            color:
+                var(--cyan);
+
+            background:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.045
+                );
+
+            border:
+                1px solid
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.18
+                );
+
+            border-radius:
+                999px;
+
+            font-size:
+                12px;
+
+            font-weight:
+                650;
+        }
+
+
+        .status-dot {
+
+            width:
+                7px;
+
+            height:
+                7px;
+
+            border-radius:
+                50%;
+
+            background:
+                var(--cyan);
+
+            box-shadow:
+                0 0 14px
+                var(--cyan);
+        }
+
+
+        .page-header h1 {
+
+            font-size:
+                clamp(
+                    48px,
+                    8vw,
+                    78px
+                );
+
+            line-height:
+                0.95;
+
+            letter-spacing:
+                -0.06em;
+
+            margin-bottom:
+                22px;
+
+            background:
+
+                linear-gradient(
+                    110deg,
+                    #ffffff 10%,
+                    #a8fff3 48%,
+                    #8b5cf6 100%
+                );
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+        }
+
+
+        .page-header p {
+
+            color:
+                var(--muted);
+
+            font-size:
+                15px;
+
+            line-height:
+                1.8;
+        }
+
+
+        /* =========================================
+           LINKS
+        ========================================= */
+
+        .links-container {
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            gap:
+                15px;
+        }
+
+
+        .social-link {
+
+            position:
+                relative;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            gap:
+                18px;
+
+            padding:
+                20px 23px;
+
+            color:
+                var(--text);
+
+            text-decoration:
+                none;
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.055
+                    ),
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.012
+                    )
+                );
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                17px;
+
+            backdrop-filter:
+                blur(16px);
+
+            -webkit-backdrop-filter:
+                blur(16px);
+
+            overflow:
+                hidden;
+
+            transition:
+                transform 0.28s ease,
+                border-color 0.28s ease,
+                background 0.28s ease,
+                box-shadow 0.28s ease;
+        }
+
+
+        .social-link::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            top:
+                0;
+
+            left:
+                -120%;
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(
+                        0,
+                        245,
+                        212,
+                        0.08
+                    ),
+                    transparent
+                );
+
+            transition:
+                left 0.6s ease;
+        }
+
+
+        .social-link:hover {
+
+            transform:
+                translateY(-5px)
+                scale(1.01);
+
+            border-color:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.30
+                );
+
+            background:
+
+                linear-gradient(
+                    145deg,
+                    rgba(
+                        0,
+                        245,
+                        212,
+                        0.07
+                    ),
+                    rgba(
+                        139,
+                        92,
+                        246,
+                        0.06
+                    )
+                );
+
+            box-shadow:
+
+                0 18px 45px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.28
+                ),
+
+                0 0 30px
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.05
+                );
+        }
+
+
+        .social-link:hover::before {
+            left: 120%;
+        }
+
+
+        /* =========================================
+           SOCIAL ICON
+        ========================================= */
+
+        .social-icon {
+
+            width:
+                55px;
+
+            height:
+                55px;
+
+            flex-shrink:
+                0;
+
+            display:
+                flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            border:
+                1px solid
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.16
+                );
+
+            border-radius:
+                14px;
+
+            background:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.045
+                );
+
+            color:
+                var(--cyan);
+
+            font-size:
+                25px;
+
+            transition:
+                0.28s ease;
+        }
+
+
+        .social-link:hover .social-icon {
+
+            transform:
+                scale(1.08);
+
+            background:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.10
+                );
+
+            border-color:
+                rgba(
+                    0,
+                    245,
+                    212,
+                    0.35
+                );
+        }
+
+
+        /* =========================================
+           SOCIAL INFO
+        ========================================= */
+
+        .social-info {
+
+            flex:
+                1;
+        }
+
+
+        .social-name {
+
+            font-size:
+                17px;
+
+            font-weight:
+                750;
+
+            margin-bottom:
+                5px;
+        }
+
+
+        .social-description {
+
+            color:
+                var(--muted);
+
+            font-size:
+                12px;
+        }
+
+
+        .arrow {
+
+            color:
+                var(--muted);
+
+            font-size:
+                17px;
+
+            transition:
+                0.25s ease;
+        }
+
+
+        .social-link:hover .arrow {
+
+            color:
+                var(--cyan);
+
+            transform:
+                translateX(5px);
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            text-align:
+                center;
+
+            padding:
+                45px 20px;
+
+            border-top:
+                1px solid var(--border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                13px;
+        }
+
+
+        footer span {
+
+            color:
+                var(--cyan);
+
+            font-weight:
+                600;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+
+                flex-direction:
+                    column;
+
+                top:
+                    10px;
+
+                padding:
+                    11px;
+            }
+
+
+            .logo {
+                text-align: center;
+            }
+
+
+            main {
+                padding-top:
+                    200px;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            main {
+
+                width:
+                    calc(100% - 28px);
+
+                padding-top:
+                    205px;
+            }
+
+
+            .social-link {
+
+                padding:
+                    17px;
+            }
+
+
+            .social-icon {
+
+                width:
+                    48px;
+
+                height:
+                    48px;
+
+                font-size:
+                    22px;
+            }
+
+
+            .social-name {
+                font-size: 15px;
+            }
+
+
+            .social-description {
+                font-size: 11px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            Ali Asghar
+            <span>Ebrahimi</span>
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="about.html">
+                About Me
+            </a>
+
+            <a href="projects.html">
+                Projects
+            </a>
+
+            <a href="achievements.html">
+                Achievements
+            </a>
+
+            <a href="technologies.html">
+                Technologies
+            </a>
+
+            <a href="expertise.html">
+                Technical Expertise
+            </a>
+
+            <a href="certificates.html">
+                Certificates
+            </a>
+
+            <a href="links.html">
+                Personal Links
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN
+    ========================================= -->
+
+    <main>
+
+
+        <section class="page-header">
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                Personal Links
+
+            </div>
+
+
+            <h1>
+                Find Me Online
+            </h1>
+
+
+            <p>
+                My personal and professional profiles,
+                projects, and content across different platforms.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================================
+             SOCIAL LINKS
+        ========================================= -->
+
+        <section class="links-container">
+
+
+            <!-- GitHub -->
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+            >
+
+                <div class="social-icon">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </div>
+
+
+                <div class="social-info">
+
+                    <div class="social-name">
+                        GitHub
+                    </div>
+
+                    <div class="social-description">
+                        My projects, source code, and repositories
+                    </div>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+
+            <!-- LinkedIn -->
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+            >
+
+                <div class="social-icon">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </div>
+
+
+                <div class="social-info">
+
+                    <div class="social-name">
+                        LinkedIn
+                    </div>
+
+                    <div class="social-description">
+                        My professional profile and experience
+                    </div>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+
+            <!-- YouTube -->
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+            >
+
+                <div class="social-icon">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </div>
+
+
+                <div class="social-info">
+
+                    <div class="social-name">
+                        YouTube
+                    </div>
+
+                    <div class="social-description">
+                        Videos, tutorials, and AI content
+                    </div>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+
+            <!-- X -->
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+            >
+
+                <div class="social-icon">
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </div>
+
+
+                <div class="social-info">
+
+                    <div class="social-name">
+                        X
+                    </div>
+
+                    <div class="social-description">
+                        Updates, ideas, and technical posts
+                    </div>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+
+            <!-- GitLab -->
+
+            <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+            >
+
+                <div class="social-icon">
+
+                    <i class="fa-brands fa-gitlab"></i>
+
+                </div>
+
+
+                <div class="social-info">
+
+                    <div class="social-name">
+                        GitLab
+                    </div>
+
+                    <div class="social-description">
+                        Code repositories and development projects
+                    </div>
+
+                </div>
+
+
+                <div class="arrow">
+                    →
+                </div>
+
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        © 2026
+
+        <span>
+            Ali Asghar Ebrahimi
+        </span>
+
+        · All rights reserved.
+
+    </footer>
+
+
+</body>
+
+</html>
